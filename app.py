@@ -9,7 +9,7 @@ app.config['SECRET_KEY'] = "random string"
 
 db=SQLAlchemy(app)
 class Record(db.Model):
-	AadhaarNo=db.Column(db.String(40),primary_key=False)
+	AadhaarNo=db.Column(db.String(40),primary_key=True)
 	Hospital=db.Column(db.String(200),nullable=False)
 	Slot=db.Column(db.String(20),nullable=False)
 
@@ -46,6 +46,7 @@ def index2():
 if __name__ == '__main__':
    db.create_all()
    app.run(debug = True)
+
 
 
 
