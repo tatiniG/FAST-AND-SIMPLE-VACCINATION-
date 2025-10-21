@@ -5,7 +5,7 @@ import openpyxl
 #AadharNo=input("Enter your Adhaar Number: ")
 people =  pd.read_excel("plp.xlsx")
 hos = pd.read_excel("VaccinationCenters.xlsx")
-AadhaarNo=str('AadhaarNo')
+AadhaarNo=str('AadhaarNo here:')
 
 def dist(lat1, long1, lat2, long2):
     loc1=(lat1,long1)
@@ -38,6 +38,7 @@ def Address(hospital):
                 return(hos.iloc[i,[6]].to_string(index=False))
                 #return(hos.iloc[i,[6]].to_string(index=False)," ",hos.iloc[i,[7]].to_string(index=False)," ",hos.iloc[i,[9]].to_string(index=False))
   
+
 
 
 
