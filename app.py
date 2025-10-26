@@ -28,8 +28,8 @@ def Register():
 
 @app.route("/slots",methods = ['POST', 'GET'])
 def index2():
-    AadhaarNo=request.form['AadharNo']
-    status=main(AadhaarNo)
+    AadhaarNo=request.form['AadharNos']
+    status=main(AadhaarNos)
     print(status)
     add=Address(status)
     Record = Record(request.form['AadhaarNo'],status, request.form['slot'])
@@ -46,6 +46,7 @@ def index2():
 if __name__ == '__main__':
    db.create_all()
    app.run(debug = True)
+
 
 
 
