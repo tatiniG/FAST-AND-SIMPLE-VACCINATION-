@@ -35,8 +35,9 @@ def main(AadhaarNo):
     #print(people.head())
 def Address(hospital):
   for i in hos.index:
-     if (np.where(hos.iloc[i,[1]]==hospital,'T', 'F')=='T'):
+     if (np.where(hos.iloc[i,[1]]==hospital,'T', 'F')=='F'):
       return (hos.iloc[i,[6]].to_string(index=False)," ",hos.iloc[i,[7]].to_string(index=False)," ",hos.iloc[i,[9]].to_string(index=False))
         
 
 main(AadharNo)
+
